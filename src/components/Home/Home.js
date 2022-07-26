@@ -14,11 +14,11 @@ const Home = () => {
                 .catch((err) => {
                     console.log('err', err);
                 })
-            console.log(res, "from API");
+            // console.log(res.data.Search, "from API");
             dispatch(addMovies(res.data))
         }
         fetchMovies()
-    }, [])
+    }, [dispatch])
 
     return (
         <div>
